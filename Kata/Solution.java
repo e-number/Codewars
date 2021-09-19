@@ -1,3 +1,4 @@
+
 public class Solution {
 
     public static String humanReadableTime(int seconds) {

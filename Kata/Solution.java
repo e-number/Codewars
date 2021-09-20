@@ -1,9 +1,14 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Solution {
 
     public static void main(String[] args) {
-        humanReadableTime(75945);
+        humanReadableTime(76920);
         digitalRoot(16);
         between(1, 4);
+        currentDate();
     }
     public static void humanReadableTime(int seconds) {
         String humanReadableTime = String.format("%02d:%02d:%02d", seconds / 3600, (seconds / 60) % 60, seconds % 60);
@@ -21,4 +26,11 @@ public class Solution {
             System.out.println(i);
         }
     }
+    public static void currentDate() {
+        DateFormat df = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+        Date now = new Date();
+        Date copiedDate = new Date(now.getTime());
+        System.out.println(df.format(copiedDate));
+    }
+
 }

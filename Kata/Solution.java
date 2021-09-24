@@ -3,12 +3,13 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 
-public class Solution {
 
+public class Solution {
     public static void main(String[] args) {
         humanReadableTime(73215);
         digitalRoot(16);
         between(1, 4);
+        simplePigLatin("Pig latin is cool");
         currentDate();
     }
 
@@ -25,13 +26,16 @@ public class Solution {
 
     public static void between(int a, int b) {
         int[] numbersBetween = new int[(b-a) + 1];
-
         for(int i = 0 ; i < numbersBetween.length; i++) {
             numbersBetween[i] = a + i;
         }
         System.out.println(Arrays.toString(numbersBetween));
     }
 
+    public static void simplePigLatin(String str) {
+        String pig = str.replaceAll("(\\w)(\\w*)", "$2$1ay");
+        System.out.println(pig);
+    }
 
 
     public static void currentDate() {

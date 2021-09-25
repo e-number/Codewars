@@ -10,6 +10,7 @@ public class Solution {
         digitalRoot(16);
         between(1, 4);
         simplePigLatin("Pig latin is cool");
+        maximumSubarraySum(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4});
         currentDate();
     }
 
@@ -36,6 +37,17 @@ public class Solution {
         String pig = str.replaceAll("(\\w)(\\w*)", "$2$1ay");
         System.out.println(pig);
     }
+
+    public static void maximumSubarraySum(int[] arr) {
+        int cur = 0, max = 0;
+        for (int i : arr) {
+            cur = Math.max(0, cur + i);
+            max = Math.max(max, cur);
+        }
+        System.out.println(max);
+    }
+
+
 
 
     public static void currentDate() {

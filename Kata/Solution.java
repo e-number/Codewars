@@ -11,6 +11,7 @@ public class Solution {
         between(1, 4);
         simplePigLatin("Pig latin is cool");
         maximumSubarraySum(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4});
+        even_or_odd(0);
         currentDate();
     }
 
@@ -36,6 +37,11 @@ public class Solution {
     public static void simplePigLatin(String str) {
         String pig = str.replaceAll("(\\w)(\\w*)", "$2$1ay");
         System.out.println(pig);
+    }
+
+    public static void even_or_odd(int number) {
+        if (number % 2 == 0) System.out.println("Even");
+        else System.out.println("Odd");
     }
 
     public static void maximumSubarraySum(int[] arr) {

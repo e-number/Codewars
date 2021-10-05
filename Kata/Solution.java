@@ -12,6 +12,7 @@ public class Solution {
         simplePigLatin("Pig latin is cool");
         maximumSubarraySum(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4});
         even_or_odd(0);
+        simpleMultiplication(24);
         currentDate();
     }
 
@@ -51,6 +52,10 @@ public class Solution {
             max = Math.max(max, cur);
         }
         System.out.println(max);
+    }
+
+    public static void simpleMultiplication (int n) {
+        System.out.println(n % 2 == 0 ? n * 8 : n * 9);
     }
 
 

@@ -14,7 +14,7 @@ public class Solution {
         maximumSubarraySum(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4});
         even_or_odd(0);
         simpleMultiplication(24);
-        solution(10);
+        multiplesOf3or5(10);
         currentDate();
     }
 
@@ -60,7 +60,7 @@ public class Solution {
         System.out.println(n % 2 == 0 ? n * 8 : n * 9);
     }
 
-    public static void solution(int number) { System.out.println(IntStream.range(0, number).filter(n -> (n % 3 == 0) || (n % 5 == 0)).sum());
+    public static void multiplesOf3or5(int number) { System.out.println(IntStream.range(0, number).filter(n -> (n % 3 == 0) || (n % 5 == 0)).sum());
 //        int sum = 0;
 //        for (int i = 1; i < number; i++) {
 //            if (i % 3 == 0 || i % 5 == 0) sum += i;
